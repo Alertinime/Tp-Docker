@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  convos:
+    image: nordaaker/convos
+    container_name: convos
+    ports:
+      - "2021:3000"
+    volumes:
+      - ./data:/home/convos/data
+    restart: unless-stopped
